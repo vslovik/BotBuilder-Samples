@@ -16,8 +16,13 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
+
+  console.log('query: ', req.body.query, 'actionModel: "', req.body.actionModel, '"');
+
   var query = req.body.query;
   var actionModel = parseActionModel(req.body.actionModel);
+
+  console.log('query', query, 'actionModel', actionModel);
 
   // restart if missing query or model
   if (!query && !actionModel) {
@@ -26,6 +31,8 @@ router.post('/', function (req, res, next) {
 
   tryEvaluate(actionModel, query, req.body)
     .then(actionModel => {
+
+      console.log('actionModel', actionModel);
 
       if(actionModel.contextModel) {
         // triggering Contextual Action from scratch is not supported on this Web Sample

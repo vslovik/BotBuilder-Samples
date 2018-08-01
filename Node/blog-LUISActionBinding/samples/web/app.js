@@ -15,7 +15,6 @@ app.listen(port, function(){
   console.log(`Server running on ${port}`);
 })
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

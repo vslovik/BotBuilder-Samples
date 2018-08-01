@@ -1,6 +1,8 @@
 // export samples
 module.exports = []
+    .concat(require('./sogetti'))
     .concat(require('./time'))
     .concat(require('./hotels'))
     .concat(require('./weather'))
-    .concat(require('./airports'));
+    .concat(require('./airports'))
+;

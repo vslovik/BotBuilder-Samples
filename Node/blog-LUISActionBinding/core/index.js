@@ -33,6 +33,7 @@ var EmptyActionModel = {
 };
 
 function evaluate(modelUrl, actions, currentActionModel, userInput, onContextCreationHandler) {
+
     if (!modelUrl) {
         throw new Error('modelUrl not set');
     }
@@ -40,6 +41,8 @@ function evaluate(modelUrl, actions, currentActionModel, userInput, onContextCre
     actions.forEach(validateAction);
 
     onContextCreationHandler = validateContextCreationHandler(onContextCreationHandler);
+
+    console.log('onContextCreationHandler', onContextCreationHandler);
 
     return new Promise(function (resolve, reject) {
         var actionModel = _.merge({}, EmptyActionModel, currentActionModel);
@@ -66,13 +69,38 @@ function evaluate(modelUrl, actions, currentActionModel, userInput, onContextCre
 
         switch (actionModel.status) {
             case Status.NoActionRecognized:
+
+                // ToDo: ci interessa questa parte
+
                 // First time input, resolve to action
                 builder.LuisRecognizer.recognize(actionModel.userInput, modelUrl, (err, intents, entities) => {
+
+                    // console.log('err: ', err, 'intents: ', intents, 'entities: ', entities);
+                    /*
+                    query cosa fa la cartotecnica tiberina? actionModel null
+                    err:  null
+                    intents:  [
+                            { intent: 'cerca_qualcosa', score: 0.9948352 },
+                            { intent: 'None', score: 0.00474676164 }
+                    ]
+
+                   entities:  [
+                            {
+                                entity: 'cartotecnica tiberina',
+                                type: 'soggetto',
+                                startIndex: 11,
+                                endIndex: 31,
+                                score: 0.8488098
+                            }
+                   ]
+                   */
+
                     if (err) {
                         return reject(err);
                     }
 
                     var action = chooseBestIntentAction(intents, actions);
+
                     if (action) {
                         // Populate action parameters with LUIS entities
                         actionModel.intentName = action.intentName;
@@ -83,6 +111,8 @@ function evaluate(modelUrl, actions, currentActionModel, userInput, onContextCre
 
                         // extract parameters from entities
                         actionModel.parameters = extractParametersFromEntities(action.schema, entities);
+
+                        console.log('parameters', actionModel.parameters);
 
                         var next = function () {
                             // Run validation
