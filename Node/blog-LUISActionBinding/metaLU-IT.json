@@ -1,0 +1,614 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "metaLU-IT",
+  "desc": "Default Intents for Azure Bot Service V2",
+  "culture": "it-it",
+  "intents": [
+    {
+      "name": "benvenuto"
+    },
+    {
+      "name": "ecco_telefono"
+    },
+    {
+      "name": "luogo"
+    },
+    {
+      "name": "no"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "segnalazione"
+    },
+    {
+      "name": "sì"
+    }
+  ],
+  "entities": [
+    {
+      "name": "asset",
+      "roles": []
+    },
+    {
+      "name": "custom-location",
+      "roles": []
+    },
+    {
+      "name": "sys.ignore",
+      "roles": []
+    },
+    {
+      "name": "telefono",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [
+    {
+      "name": "pericoli",
+      "mode": true,
+      "words": "orso,ubriaco,capriolo",
+      "activated": true
+    },
+    {
+      "name": "strada",
+      "mode": true,
+      "words": "strada,via,viale,corso,strade,vicolo,statale",
+      "activated": true
+    },
+    {
+      "name": "albero",
+      "mode": true,
+      "words": "albero,pioppo,pino,pianta,quercia",
+      "activated": true
+    },
+    {
+      "name": "edificio",
+      "mode": true,
+      "words": "edificio,casa,palazzo,rudere",
+      "activated": true
+    },
+    {
+      "name": "animale",
+      "mode": true,
+      "words": "animale,cinghiale,maiale,cane,gatto,lepre,piccioni,palombo,piccione,palombi,rondoni,rondone,pipistrello,pipistrelli,caprioli,capriolo,mucca,toro",
+      "activated": true
+    },
+    {
+      "name": "parco",
+      "mode": true,
+      "words": "parco,parchino,parchetto",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "321950263",
+      "intent": "ecco_telefono",
+      "entities": [
+        {
+          "entity": "telefono",
+          "startPos": 0,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "assolutamente no",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "buonasera",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "buongiorno",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "buongiorno!",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "c'è un capriolo in mezzo alla strada davanti alla coop",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 14
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 16,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "c'è un capriolo libero",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "c'è un cornicione pericolante a scuola",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "c'è un lampione che non funziona",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "c'è un lampione che non funziona in corso garibaldi",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 14
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 36,
+          "endPos": 50
+        }
+      ]
+    },
+    {
+      "text": "c'è un problema in piazza del mercato",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 19,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "c'è un problema in via morandi",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 19,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "c'è un problema, presto",
+      "intent": "segnalazione",
+      "entities": []
+    },
+    {
+      "text": "c'è un ubriaco in via del vignola",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 7,
+          "endPos": 13
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 18,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "c'è una buca sulla strada",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "certo",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "certo che no",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "certo che sì",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "certo il mio numero è 075 9415149",
+      "intent": "ecco_telefono",
+      "entities": [
+        {
+          "entity": "telefono",
+          "startPos": 22,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "ciao",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "ciao presto c'è un orso davanti alla coop",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 19,
+          "endPos": 22
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 24,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "ciao vorrei segnalare la presenza di un capriolo davanti alla coop",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 40,
+          "endPos": 47
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 49,
+          "endPos": 65
+        }
+      ]
+    },
+    {
+      "text": "come va?",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "davanti alla coop",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 0,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "davanti alla farmacia",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 0,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "dietro alle scuole elementari",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 0,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "è caduto un albero in mezzo alla strada",
+      "intent": "segnalazione",
+      "entities": []
+    },
+    {
+      "text": "è caduto un albero in via giovanni paolo",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 12,
+          "endPos": 17
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 22,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "hanno rotto un lampione",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "hey",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "in centro",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 3,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "in corso garibaldi",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 3,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "in piazza grande",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 3,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "in via de angelis",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 3,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "in via pitulo",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 3,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "my water bottle is green.",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "nessun pericolo",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "no",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "no grazie",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "no, nessun pericolo",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non credo",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non farlo",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non mi interessa",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non proprio",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non sono d'accordo",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "non voglio",
+      "intent": "no",
+      "entities": []
+    },
+    {
+      "text": "ovvio",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "per i bambini",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "per il traffico",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "per le auto",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "per le persone",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "presto serve aiuto, c'è un orso davanti alla coop",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "asset",
+          "startPos": 27,
+          "endPos": 30
+        },
+        {
+          "entity": "custom-location",
+          "startPos": 32,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "richiamatemi al 333 43 69 181",
+      "intent": "ecco_telefono",
+      "entities": [
+        {
+          "entity": "telefono",
+          "startPos": 16,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "salve",
+      "intent": "benvenuto",
+      "entities": []
+    },
+    {
+      "text": "si",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "sì",
+      "intent": "sì",
+      "entities": []
+    },
+    {
+      "text": "sotto al ponte del tevere",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 0,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "there is a large deep dish pizza in your future.",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "vicino al cimitero",
+      "intent": "luogo",
+      "entities": [
+        {
+          "entity": "custom-location",
+          "startPos": 0,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "vorrei segnalare la presenza di un cinghiale in via cairoli",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "sys.ignore",
+          "startPos": 0,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "vorrei segnalare una strada piena di buche",
+      "intent": "segnalazione",
+      "entities": [
+        {
+          "entity": "sys.ignore",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "asset",
+          "startPos": 21,
+          "endPos": 26
+        }
+      ]
+    }
+  ]
+}

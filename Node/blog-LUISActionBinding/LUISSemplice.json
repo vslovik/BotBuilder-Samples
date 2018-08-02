@@ -1,0 +1,497 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "LUISSemplice",
+  "desc": "LUIS semplice",
+  "culture": "it-it",
+  "intents": [
+    {
+      "name": "cerca_qualcosa"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "campi_solr",
+      "roles": []
+    },
+    {
+      "name": "soggetto",
+      "roles": []
+    },
+    {
+      "name": "sys.ignore",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [
+    {
+      "name": "azienda",
+      "mode": true,
+      "words": "azienda,ditta",
+      "activated": true
+    },
+    {
+      "name": "organizzazione",
+      "mode": true,
+      "words": "organizzazione,ente",
+      "activated": true
+    },
+    {
+      "name": "persona",
+      "mode": true,
+      "words": "tizio,tipo",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "adesso cercami roberto magnanelli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 15,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "azienda",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "cerca aimet",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 6,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "cerca alessandro del bene",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 6,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "cerca una persona di nome francesco sandrelli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "sys.ignore",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "sys.ignore",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 26,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "cercami giovanni bottura",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "cercami giovanni valdambirni",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "cercami giovanni valdambrini",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "cercami la persona giovanni valdambrini",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 19,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "cercami la persona roberto battistelli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 19,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "cercami la persona umberto battistelli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 19,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "cercami lorenzo cerbini è una persona",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 22
+        },
+        {
+          "entity": "campi_solr",
+          "startPos": 30,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "cercami margherita sandrelli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "cercami massimiliano gullini",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "cercami telecom",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "cercami vodafone",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "cerco una persona che si chiama andrea godioli",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "sys.ignore",
+          "startPos": 6,
+          "endPos": 8
+        },
+        {
+          "entity": "campi_solr",
+          "startPos": 10,
+          "endPos": 16
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 32,
+          "endPos": 45
+        }
+      ]
+    },
+    {
+      "text": "cerco un'azienda di nome ciccia pelliccia",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 9,
+          "endPos": 15
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 25,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "che aziende sono coinvolte?",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 4,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "che cosa sai dirmi dell'azienda telecom",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 24,
+          "endPos": 30
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 32,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "che cosa sai dirmi di sergio roscini",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 22,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "che mi dici della telecom",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "che sai dirmi di raniero manfroni",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 17,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "con chi lavora l'azienda fiat spa",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 17,
+          "endPos": 23
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 25,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "cosa fa la cartotecnica tiberina",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 11,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "dimmi quali organizzazioni ci sono",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 12,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "quali altre persone ci sono?",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "quali persone sono citate?",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 6,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "quante persone ci sono?",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "quanti documenti ci sono riguardanti l'azienda sai",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 39,
+          "endPos": 45
+        },
+        {
+          "entity": "soggetto",
+          "startPos": 47,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "voglio informazioni su di una azienda",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "sys.ignore",
+          "startPos": 26,
+          "endPos": 28
+        },
+        {
+          "entity": "campi_solr",
+          "startPos": 30,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "voglio informazioni su genoveffa spione",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 23,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "voglio l'elenco delle aziende",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "campi_solr",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "vorrei informazioni riguardo anna gabbolini",
+      "intent": "cerca_qualcosa",
+      "entities": [
+        {
+          "entity": "soggetto",
+          "startPos": 29,
+          "endPos": 42
+        }
+      ]
+    }
+  ]
+}

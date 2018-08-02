@@ -1,3 +1,46 @@
+# Prova di simple bot
+
+    1. Installare i pachetti node:
+
+        cd ./core && npm install
+        cd ./samples && npm install
+        cd ./samples/web && npm install
+
+    2. Lanciare l'applicazione web:
+
+        node app.js
+
+    3. Apprirla nel browser: http://localhost:8000
+    4. Inserire una frase simile agli esempi ripostati sotto il campo del testo
+
+    L'applicazione deve riportare il numero di record trovati nel knowledge base (solr)
+
+    5. Vedere i messaggi di output di console, controllare
+        gli parametri della chiamata a database e
+        i dati della risposta
+
+    Es.:
+
+        query:  quanti documenti ci sono riguardanti l'azienda sai actionModel: "  "
+        query:  quanti documenti ci sono riguardanti l'azienda sai actionModel:  null
+        { campi_solr: 'azienda', soggetto: 'sai' } [Function] [ {} ]
+        Chiamata al servizio remoto: http://knowledge.progettosemplice.it/solr/semplice/select?q=ne_norm_aziende:"SAI"&facet=true&fl=id&rows=0
+        Risposta:  <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+        <lst name="responseHeader"><int name="status">0</int><int name="QTime">26</int><lst name="params"><str name="facet">true</str><str name="fl">id</str><str name="q">ne_norm_aziende:"SAI"</str><str name="rows">0</str></lst></lst><result name="response" numFound="0" start="0"></result><lst name="facet_counts"><lst name="facet_queries"/><lst name="facet_fields"/><lst name="facet_dates"/><lst name="facet_ranges"/></lst>
+        </response>
+
+        Numero di record trovati :  0
+        actionModel:  { status: 'Fulfilled',
+          intentName: 'cerca_qualcosa',
+          result: 'Query: Il numero di record trovati è 0',
+          userInput: 'quanti documenti ci sono riguardanti l\'azienda sai',
+          currentParameter: null,
+          parameters: { campi_solr: 'azienda', soggetto: 'sai' },
+          parameterErrors: [] }
+        POST / 200 1235.608 ms - 329
+
+
 # LUIS Action Binding Sample
 
 A sample that contains a core implementation for doing LUIS Action Binding, in order to handle LUIS intents taking a service result as input. In addition, the project contains Action samples and shows how to integrate them in a console, a bot and a web application.
