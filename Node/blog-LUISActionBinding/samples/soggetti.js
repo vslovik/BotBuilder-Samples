@@ -25,8 +25,6 @@ var SogettiInPlaceAction = {
 
 
         if(parameters.soggetto) {
-            var campi_solr = parameters.campi_solr ? parameters.campi_solr : 'persona';
-            var soggetto = parameters.soggetto;
 
             var field;
             switch(parameters.campi_solr) {
